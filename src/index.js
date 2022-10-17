@@ -4,7 +4,7 @@ import './tailwind.css';
 
 function Square(props) {
 	return (
-		<button className="square" onClick={props.onClick} >
+		<button className="square h-1/3 w-1/3" onClick={props.onClick} >
 			{props.value}
 		</button>
 	);
@@ -70,10 +70,10 @@ class Board extends React.Component {
 class Game extends React.Component {
 	render() {
 		return (
-			<main className="flex items-center justify-center">
-				<h1>Tic-Tac-Toe</h1>
-				<div className="game">
-					<div className="game-board">
+			<main>
+				<h1 className="flex justify-center font-bold text-xl">Tic-Tac-Toe</h1>
+				<div className="game flex items-center justify-center">
+					<div className="game-board w-full md:max-w-screen-sm lg:max-w-screen-md">
 						<Board />
 					</div>
 					<div className="game-info">

@@ -553,6 +553,18 @@ video {
   display: flex;
 }
 
+.h-1\/3 {
+  height: 33.333333%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .items-center {
   align-items: center;
 }
@@ -561,8 +573,17 @@ video {
   justify-content: center;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 body {
-  font: 1rem "Century Gothic", Futura, sans-serif;
+  font: "Century Gothic", Futura, sans-serif;
   margin: 20px;
   box-sizing: border-box;
 }
@@ -570,6 +591,12 @@ body {
 ol,
 ul {
   padding-left: 30px;
+}
+
+.board-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .board-row:after {
@@ -583,25 +610,23 @@ ul {
 }
 
 .square {
+  aspect-ratio: 1/1;
   background: #fff;
   border: 1px solid #999;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  min-height: 34px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  min-width: 34px;
 }
 
 .square:focus {
-  outline: solid;
-}
-
-.kbd-navigation .square:focus {
+  outline: none;
   background: #ddd;
 }
 
@@ -612,4 +637,16 @@ ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .md\:max-w-screen-sm {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-screen-md {
+    max-width: 768px;
+  }
 }
