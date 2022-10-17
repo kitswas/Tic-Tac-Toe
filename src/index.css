@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 1rem "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  box-sizing: border-box;
 }
 
 ol,
@@ -38,7 +39,7 @@ ul {
 }
 
 .square:focus {
-  outline: none;
+  outline: solid;
 }
 
 .kbd-navigation .square:focus {
