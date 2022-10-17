@@ -4,7 +4,7 @@ import './tailwind.css';
 
 function Square(props) {
 	return (
-		<button className="square h-1/3 w-1/3" onClick={props.onClick} >
+		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 sm:h-32 sm:w-32" onClick={props.onClick} >
 			{props.value}
 		</button>
 	);
@@ -21,7 +21,7 @@ class Board extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='outline-double outline-amber-600 outline-4 p-0 w-fit h-fit'>
 				<div className="board-row">
 					{this.renderSquare(0)}
 					{this.renderSquare(1)}
@@ -94,17 +94,11 @@ class Game extends React.Component {
 		}
 		return (
 			<main>
-				<h1 className="flex justify-center font-bold text-xl">Tic-Tac-Toe</h1>
-				<div className="game flex items-center justify-center">
-					<div className="game-board w-full md:max-w-screen-sm lg:max-w-screen-md">
-						<Board
-							squares={current.squares}
-							onClick={(i) => this.handleClick(i)}
-						/>
-					</div>
+				<h1 className="flex justify-center font-bold text-2xl m-2">Tic-Tac-Toe</h1>
+				<div className="game flex flex-wrap items-center justify-center w-full">
 					<div className="game-info">
 						<div>{status}</div>
-						<div className='flex'>
+						<div className='flex flex-wrap'>
 							<button
 								className='bg-blue-500 m-1 p-1 text-white rounded'
 								onClick={() => this.undo()}
@@ -114,6 +108,12 @@ class Game extends React.Component {
 								onClick={() => this.redo()}
 							>Redo</button>
 						</div>
+					</div>
+					<div className="game-board">
+						<Board
+							squares={current.squares}
+							onClick={(i) => this.handleClick(i)}
+						/>
 					</div>
 				</div>
 			</main >

@@ -31,15 +31,11 @@ ul {
 
 .square {
   aspect-ratio: 1/1;
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
+  border: 1px solid rgb(255, 180, 67);
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
   min-height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
   min-width: 34px;
@@ -47,7 +43,6 @@ ul {
 
 .square:focus {
   outline: none;
-  background: #ddd;
 }
 
 .game {
@@ -55,6 +50,12 @@ ul {
   flex-direction: row;
 }
 
+.game-board {
+  margin: 10px;
+}
+
 .game-info {
-  margin-left: 20px;
+  width: 20%;
+  min-width: 180px;
+  margin: 10px;
 }

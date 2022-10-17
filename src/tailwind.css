@@ -549,6 +549,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .m-1 {
   margin: 0.25rem;
 }
@@ -561,12 +565,28 @@ video {
   height: 33.333333%;
 }
 
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .w-1\/3 {
   width: 33.333333%;
 }
 
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -586,13 +606,31 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.from-amber-300 {
+  --tw-gradient-from: #fcd34d;
+  --tw-gradient-to: rgb(252 211 77 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-yellow-200 {
+  --tw-gradient-to: #fef08a;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -602,6 +640,18 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.outline-double {
+  outline-style: double;
+}
+
+.outline-4 {
+  outline-width: 4px;
+}
+
+.outline-amber-600 {
+  outline-color: #d97706;
 }
 
 body {
@@ -633,15 +683,11 @@ ul {
 
 .square {
   aspect-ratio: 1/1;
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
+  border: 1px solid rgb(255, 180, 67);
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
   min-height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
   min-width: 34px;
@@ -649,7 +695,6 @@ ul {
 
 .square:focus {
   outline: none;
-  background: #ddd;
 }
 
 .game {
@@ -657,18 +702,42 @@ ul {
   flex-direction: row;
 }
 
-.game-info {
-  margin-left: 20px;
+.game-board {
+  margin: 10px;
 }
 
-@media (min-width: 768px) {
-  .md\:max-w-screen-sm {
-    max-width: 640px;
+.game-info {
+  width: 20%;
+  min-width: 180px;
+  margin: 10px;
+}
+
+.focus\:from-amber-500:focus {
+  --tw-gradient-from: #f59e0b;
+  --tw-gradient-to: rgb(245 158 11 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.focus\:to-yellow-100:focus {
+  --tw-gradient-to: #fef9c3;
+}
+
+@media (min-width: 640px) {
+  .sm\:h-32 {
+    height: 8rem;
+  }
+
+  .sm\:w-32 {
+    width: 8rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:max-w-screen-md {
-    max-width: 768px;
+@media (min-width: 768px) {
+  .md\:h-64 {
+    height: 16rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 }
