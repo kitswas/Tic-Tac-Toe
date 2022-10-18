@@ -4,7 +4,7 @@ import './tailwind.css';
 
 function Square(props) {
 	return (
-		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 md:text-9xl sm:h-32 sm:w-32 sm:text-6xl xs:h-16 xs:w-16 xs:text-3xl text-black" onClick={props.onClick} >
+		<button aria-label={"Square " + props.label} className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 md:text-9xl sm:h-32 sm:w-32 sm:text-6xl xs:h-16 xs:w-16 xs:text-3xl text-black" onClick={props.onClick} >
 			{props.value}
 		</button>
 	);
@@ -16,6 +16,7 @@ class Board extends React.Component {
 		return (<Square
 			value={this.props.squares[i]}
 			onClick={() => this.props.onClick(i)}
+			label={i + 1}
 		/>);
 	}
 
@@ -93,9 +94,11 @@ class Game extends React.Component {
 			status = `Next player: ` + (this.state.xIsNext ? 'X' : 'O');
 		}
 		return (
-			<main>
-				<h1 className="flex justify-center font-bold text-2xl p-2 bg-black">Tic-Tac-Toe</h1>
-				<div className="game items-center justify-center w-full">
+			<div>
+				<header className="flex justify-center font-bold text-2xl p-2 bg-black">
+					<h1>Tic-Tac-Toe</h1>
+				</header>
+				<main className="game items-center justify-center w-full">
 					<div className="game-info">
 						<div className='m-1'>
 							<p className='text-rose-300 flex flex-wrap'>
@@ -111,11 +114,11 @@ class Game extends React.Component {
 						<div className='m-1'>{status}</div>
 						<div className='flex flex-wrap'>
 							<button
-								className='bg-blue-500 m-1 p-1 text-white rounded'
+								className='bg-orange-800 m-1 p-1 text-white rounded'
 								onClick={() => this.undo()}
 							>Undo</button>
 							<button
-								className='bg-blue-500 m-1 p-1 text-white rounded'
+								className='bg-orange-800 m-1 p-1 text-white rounded'
 								onClick={() => this.redo()}
 							>Redo</button>
 						</div>
@@ -126,8 +129,8 @@ class Game extends React.Component {
 							onClick={(i) => this.handleClick(i)}
 						/>
 					</div>
-				</div>
-			</main >
+				</main>
+			</div >
 		);
 	}
 
