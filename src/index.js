@@ -100,27 +100,35 @@ class Game extends React.PureComponent {
 				</header>
 				<main className="game items-center justify-center w-full">
 					<div className="game-info">
-						<div className='m-1'>
-							<p className='text-rose-300 flex flex-wrap'>
+						<div className='grid mt-4 p-1 rounded items-center justify-center text-center outline outline-1 outline-amber-600'>
+							<p className='text-rose-300'>
 								Feeling Bored? Want to interact with the person sitting across you?
 							</p>
-							<p className='text-sky-300 flex flex-wrap'>
+							<p className='text-sky-300'>
 								Lack pen and paper?
 							</p>
-							<p className='text-lime-300 flex flex-wrap'>
+							<p className='text-lime-300'>
 								Play Tic-Tac-Toe!
 							</p>
+							<button
+								className='bg-orange-800 p-1 text-white rounded'
+								onClick={() => window.location.reload()}
+							>
+								Start a new Game
+							</button>
 						</div>
-						<div className='m-1'>{status}</div>
-						<div className='flex flex-wrap'>
-							<button
-								className='bg-orange-800 m-1 p-1 text-white rounded'
-								onClick={() => this.undo()}
-							>Undo</button>
-							<button
-								className='bg-orange-800 m-1 p-1 text-white rounded'
-								onClick={() => this.redo()}
-							>Redo</button>
+						<div className='grid mt-4 rounded items-center justify-center outline outline-1 outline-amber-600'>
+							<div className='m-1'>{status}</div>
+							<div className='flex flex-wrap'>
+								<button
+									className='bg-orange-800 m-1 p-1 text-white rounded'
+									onClick={() => this.undo()}
+								>Undo</button>
+								<button
+									className='bg-orange-800 m-1 p-1 text-white rounded'
+									onClick={() => this.redo()}
+								>Redo</button>
+							</div>
 						</div>
 					</div>
 					<div className="game-board">
