@@ -10,7 +10,7 @@ function Square(props) {
 	);
 }
 
-class Board extends React.Component {
+class Board extends React.PureComponent {
 
 	renderSquare(i) {
 		return (<Square
@@ -43,7 +43,7 @@ class Board extends React.Component {
 	}
 }
 
-class Game extends React.Component {
+class Game extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
