@@ -4,7 +4,7 @@ import './tailwind.css';
 
 function Square(props) {
 	return (
-		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 sm:h-32 sm:w-32 text-black" onClick={props.onClick} >
+		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 sm:h-32 sm:w-32 xs:h-16 xs:w-16 text-black" onClick={props.onClick} >
 			{props.value}
 		</button>
 	);
@@ -95,16 +95,16 @@ class Game extends React.Component {
 		return (
 			<main>
 				<h1 className="flex justify-center font-bold text-2xl p-2 bg-black">Tic-Tac-Toe</h1>
-				<div className="game flex flex-wrap items-center justify-center w-full">
+				<div className="game items-center justify-center w-full">
 					<div className="game-info">
 						<div className='m-1'>
-							<p className='text-rose-300'>
+							<p className='text-rose-300 flex flex-wrap'>
 								Feeling Bored? Want to interact with the person sitting across you?
 							</p>
-							<p className='text-sky-300'>
+							<p className='text-sky-300 flex flex-wrap'>
 								Lack pen and paper?
 							</p>
-							<p className='text-lime-300'>
+							<p className='text-lime-300 flex flex-wrap'>
 								Play Tic-Tac-Toe!
 							</p>
 						</div>

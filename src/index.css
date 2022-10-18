@@ -49,6 +49,7 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .game-board {
@@ -56,7 +57,7 @@ ul {
 }
 
 .game-info {
-  width: 20%;
   min-width: 96px;
+  max-width: 30%;
   margin: 1%;
 }

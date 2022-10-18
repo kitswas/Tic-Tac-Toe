@@ -726,6 +726,7 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .game-board {
@@ -733,8 +734,8 @@ ul {
 }
 
 .game-info {
-  width: 20%;
   min-width: 96px;
+  max-width: 30%;
   margin: 1%;
 }
 
@@ -746,6 +747,16 @@ ul {
 
 .focus\:to-yellow-100:focus {
   --tw-gradient-to: #fef9c3;
+}
+
+@media (min-width: 360px) {
+  .xs\:h-16 {
+    height: 4rem;
+  }
+
+  .xs\:w-16 {
+    width: 4rem;
+  }
 }
 
 @media (min-width: 640px) {
