@@ -97,6 +97,17 @@ class Game extends React.Component {
 				<h1 className="flex justify-center font-bold text-2xl p-2 bg-black">Tic-Tac-Toe</h1>
 				<div className="game flex flex-wrap items-center justify-center w-full">
 					<div className="game-info">
+						<div className='m-1'>
+							<p className='text-rose-300'>
+								Feeling Bored? Want to interact with the person sitting across you?
+							</p>
+							<p className='text-sky-300'>
+								Lack pen and paper?
+							</p>
+							<p className='text-lime-300'>
+								Play Tic-Tac-Toe!
+							</p>
+						</div>
 						<div className='m-1'>{status}</div>
 						<div className='flex flex-wrap'>
 							<button
