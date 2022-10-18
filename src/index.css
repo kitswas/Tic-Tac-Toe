@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font: "Century Gothic", Futura, sans-serif;
+  font-family: Futura, "Century Gothic", sans-serif;
   color: white;
   background: rgb(64, 64, 64);
   box-sizing: border-box;
