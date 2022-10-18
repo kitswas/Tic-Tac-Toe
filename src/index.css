@@ -4,7 +4,8 @@
 
 body {
   font: "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  color: white;
+  background: rgb(64, 64, 64);
   box-sizing: border-box;
 }
 
@@ -56,6 +57,6 @@ ul {
 
 .game-info {
   width: 20%;
-  min-width: 180px;
-  margin: 10px;
+  min-width: 96px;
+  margin: 1%;
 }
