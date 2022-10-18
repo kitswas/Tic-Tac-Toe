@@ -4,7 +4,7 @@ import './tailwind.css';
 
 function Square(props) {
 	return (
-		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 sm:h-32 sm:w-32 xs:h-16 xs:w-16 text-black" onClick={props.onClick} >
+		<button className="square bg-gradient-to-tr from-amber-300 to-yellow-200 focus:from-amber-500 focus:to-yellow-100 h-1/3 w-1/3 md:h-64 md:w-64 md:text-9xl sm:h-32 sm:w-32 sm:text-6xl xs:h-16 xs:w-16 xs:text-3xl text-black" onClick={props.onClick} >
 			{props.value}
 		</button>
 	);

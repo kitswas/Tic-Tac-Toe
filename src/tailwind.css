@@ -710,9 +710,8 @@ ul {
 .square {
   aspect-ratio: 1/1;
   border: 1px solid rgb(255, 180, 67);
-  font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 100%;
   min-height: 34px;
   padding: 0;
   text-align: center;
@@ -757,6 +756,11 @@ ul {
   .xs\:w-16 {
     width: 4rem;
   }
+
+  .xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -767,6 +771,11 @@ ul {
   .sm\:w-32 {
     width: 8rem;
   }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -776,5 +785,10 @@ ul {
 
   .md\:w-64 {
     width: 16rem;
+  }
+
+  .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
   }
 }
