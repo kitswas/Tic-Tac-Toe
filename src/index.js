@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './tailwind.css';
+import GitHubLogo32px from './images/GitHub-Mark-Light-32px.png';
+import GitHubLogo64px from './images/GitHub-Mark-Light-64px.png';
 
 function Square(props) {
 	return (
@@ -97,6 +99,9 @@ class Game extends React.PureComponent {
 			<div>
 				<header className="flex justify-center font-bold text-2xl p-2 bg-black">
 					<h1>Tic-Tac-Toe</h1>
+					<a href="https://github.com/kitswas/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer" className="flex flex-row-reverse sm:w-9/12 min-w-fit">
+						<img srcSet={GitHubLogo32px + ' 1x, ' + GitHubLogo64px + ' 2x'} alt="GitHub Logo" className="inline-block h-8 w-8 p-1" />
+					</a>
 				</header>
 				<main className="game items-center justify-center w-full">
 					<div className="game-info">
