@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Tic-Tac-Toe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I created this web app while learning [React](https://reactjs.org/).
+Visit [this link](https://tic-tac-toe-kitswas.vercel.app/) to play on any browser. 
+
+I used [Create React App](https://github.com/facebook/create-react-app) to bootstrap this project.
 
 ## Available Scripts
 
